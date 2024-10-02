@@ -26,12 +26,11 @@ def selection(ary):
     return ary
 
 def insertion(ary):
-    for i in range(len(ary) - 1):
-        j = i
+    for i in range(len(ary) -1):
+        j = i + 1
         while j > 0 and ary[j-1] > ary[j]:
-            swap = ary[j] 
-            ary[j] = ary[j-1]
-            ary[j-1] = swap
-            j -= 1          
+            ary[j-1],ary[j] = ary[j], ary[j-1]
+            j -= 1
+    return ary         
     return ary
 
